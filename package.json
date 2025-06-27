@@ -1,22 +1,35 @@
 {
     "name": "tsup-vitest-monorepo-boilerplate",
     "version": "1.0.0",
-    "description": "",
+    "description": "A modern TypeScript monorepo boilerplate with tsup, vitest, and comprehensive tooling",
     "type": "module",
     "main": "index.js",
     "scripts": {
-        "build": "pnpm -r -if-present build",
+        "build": "pnpm -r --if-present build",
         "build:watch": "pnpm build -- --watch",
-        "lint": "eslint --fix",
+        "lint": "eslint --fix .",
+        "lint:check": "eslint .",
+        "type-check": "tsc --noEmit",
         "test": "pnpm -r --if-present test",
         "test:unit": "pnpm -r --if-present test:unit",
         "test:integration": "pnpm -r --if-present test:integration",
+        "test:coverage": "vitest run --coverage",
+        "changeset": "changeset",
+        "changeset:version": "changeset version",
+        "changeset:publish": "changeset publish",
         "prepare": "is-ci || husky"
     },
-    "keywords": [],
-    "author": "",
+    "keywords": [
+        "typescript",
+        "monorepo",
+        "tsup",
+        "vitest",
+        "boilerplate"
+    ],
+    "author": "Chienhsin Yang <y1j2x345@gmail.com>",
     "license": "ISC",
     "devDependencies": {
+        "@changesets/cli": "^2.27.1",
         "@commitlint/cli": "^18.6.0",
         "@commitlint/config-conventional": "^18.6.0",
         "@commitlint/prompt-cli": "^18.6.0",
@@ -51,7 +64,13 @@
     },
     "pre-commit": "lint-staged",
     "lint-staged": {
-        "*.{js,ts,cjs,mjs,md,json,jsonc}": "biome ci --no-errors-on-unmatched"
+        "*.{js,ts,cjs,mjs}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{md,json,jsonc}": [
+            "prettier --write"
+        ]
     },
     "publishConfig": {
         "registry": "https://registry.npmjs.org/"
