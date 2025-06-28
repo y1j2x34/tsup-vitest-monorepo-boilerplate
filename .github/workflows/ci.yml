@@ -145,4 +145,4 @@ jobs:
         run: pnpm audit --audit-level moderate
 
       - name: Check for known vulnerabilities
-        run: pnpm audit --fix --dry-run 
+        run: pnpm audit || true
