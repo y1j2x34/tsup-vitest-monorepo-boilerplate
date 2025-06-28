@@ -41,4 +41,5 @@ module.exports = {
         'arrow-parens': 'off',
         indent: ['error', 4, { SwitchCase: 1 }],
     },
+    ignorePatterns: ['node_modules', 'dist', 'lib', 'docs', '.github', '.husky', 'coverage'],
 };
