@@ -17,7 +17,8 @@
         "changeset": "changeset",
         "changeset:version": "changeset version",
         "changeset:publish": "changeset publish",
-        "prepare": "is-ci || husky"
+        "prepare": "is-ci || husky",
+        "tsc": "tsc --noEmit --project tsconfig.source.json && tsc --noEmit --project tsconfig.test.json && tsc --noEmit --project tsconfig.devtools.json"
     },
     "keywords": [
         "typescript",

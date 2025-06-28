@@ -1,16 +1,23 @@
 {
     "extends": "./tsconfig.options.json",
     "compilerOptions": {
+        "customConditions": [],
         "verbatimModuleSyntax": false,
         "module": "NodeNext",
         "target": "ESNext",
         "moduleResolution": "NodeNext",
-        "lib": ["ESNext"],
-        "types": ["node"],
+        "lib": [
+            "ESNext"
+        ],
+        "types": [
+            "node"
+        ],
         "composite": true,
         "declaration": true,
+        "noEmit": true
     },
-    "includes": [
-        "./vitest.config.ts"
+    "include": [
+        "vitest.config.ts",
+        "tsup.config.ts"
     ]
 }
