@@ -9,7 +9,7 @@ module.exports = {
                 'plugin:@typescript-eslint/recommended',
             ],
             parserOptions: {
-                project: [__dirname + '/tsconfig.source.json'],
+                project: [__dirname + '/tsconfig.source.json', __dirname + '/tsconfig.test.json'],
             },
             rules: {
                 '@typescript-eslint/no-inferrable-types': 'off',

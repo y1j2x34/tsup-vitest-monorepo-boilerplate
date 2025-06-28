@@ -10,6 +10,30 @@ export default defineConfig({
         typecheck: {
             tsconfig: './tsconfig.test.json',
         },
+        coverage: {
+            provider: 'v8',
+            reporter: ['text', 'json', 'html', 'lcov'],
+            reportsDirectory: './coverage',
+            exclude: [
+                'node_modules/',
+                'dist/',
+                'lib/',
+                '**/*.d.ts',
+                '**/*.config.*',
+                '**/coverage/**',
+                '**/__tests__/**',
+                '**/*.spec.*',
+                '**/*.test.*',
+            ],
+            thresholds: {
+                global: {
+                    branches: 70,
+                    functions: 70,
+                    lines: 70,
+                    statements: 70,
+                },
+            },
+        },
         projects: [
             {
                 test: {
