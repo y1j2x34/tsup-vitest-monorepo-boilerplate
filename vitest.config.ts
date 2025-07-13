@@ -2,28 +2,29 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
     resolve: {
-        conditions: ['@monorepo/source'],
+        conditions: ['@vgerbot/source'],
     },
     test: {
-        environment: 'node',
         globals: true,
         typecheck: {
             tsconfig: './tsconfig.test.json',
         },
         coverage: {
-            provider: 'v8',
-            reporter: ['text', 'json', 'html', 'lcov'],
+            enabled: true,
+            provider: 'istanbul',
+            reporter: ['text', 'html', 'cobertura'],
             reportsDirectory: './coverage',
             exclude: [
-                'node_modules/',
-                'dist/',
-                'lib/',
+                '**/node_modules/**',
+                '**/dist/**',
+                '**/lib/**',
                 '**/*.d.ts',
                 '**/*.config.*',
                 '**/coverage/**',
                 '**/__tests__/**',
                 '**/*.spec.*',
                 '**/*.test.*',
+                '**/docs/**',
             ],
             thresholds: {
                 global: {
@@ -37,6 +38,7 @@ export default defineConfig({
         projects: [
             {
                 test: {
+                    environment: 'node',
                     name: 'unit',
                     include: ['**/unit/**/*.spec.ts'],
                     globals: true,
@@ -47,6 +49,15 @@ export default defineConfig({
                     name: 'integration',
                     include: ['**/integration/**/*.spec.ts'],
                     globals: true,
+                    browser: {
+                        enabled: true,
+                        provider: 'playwright',
+                        instances: [
+                            {
+                                browser: 'chromium',
+                            },
+                        ],
+                    },
                 },
             },
         ],

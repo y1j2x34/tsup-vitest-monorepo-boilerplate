@@ -5,9 +5,8 @@
         "composite": true,
         "module": "ESNext",
         "moduleResolution": "Bundler",
-        "target": "ESNext"
+        "target": "ESNext",
+        "lib": ["ESNext", "DOM", "WebWorker"]
     },
-    "include": [
-        "**/src/**/*.ts"
-    ]
+    "include": ["**/src/**/*.ts"]
 }

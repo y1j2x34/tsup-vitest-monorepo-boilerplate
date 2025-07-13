@@ -2,21 +2,12 @@
     "extends": "./tsconfig.options.json",
     "compilerOptions": {
         "composite": true,
-        "lib": [
-            "ESNext"
-        ],
+        "lib": ["ESNext", "DOM", "WebWorker"],
         "module": "ESNext",
         "target": "ESNext",
         "moduleResolution": "Bundler",
         // Include test-specific types.
-        "types": [
-            "vitest/globals",
-            "node"
-        ]
+        "types": ["vitest/globals", "node"]
     },
-    "include": [
-        "packages/**/__tests__/**/*.ts",
-        "packages/**/__tests__/**/*.spec.ts",
-        "packages/**/src/**/*.ts"
-    ]
+    "include": ["packages/*/src/**/*.ts", "packages/**/__tests__/**/*.ts"]
 }

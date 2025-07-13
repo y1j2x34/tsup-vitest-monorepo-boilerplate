@@ -5,8 +5,6 @@ export default defineConfig({
     dts: true,
     minify: false,
 
-    tsconfig: './tsconfig.build.json',
-
     format: ['cjs', 'esm'],
     outDir: 'lib',
 });
