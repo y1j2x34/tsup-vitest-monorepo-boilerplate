@@ -24,7 +24,7 @@
     "author": "Chienhsin Yang <y1j2x345@gmail.com>",
     "license": "ISC",
     "devDependencies": {
-        "@changesets/cli": "^2.29.6",
+        "@changesets/cli": "^2.29.7",
         "@commitlint/cli": "^19.8.1",
         "@commitlint/config-conventional": "^19.8.1",
         "@commitlint/prompt-cli": "^19.8.1",
