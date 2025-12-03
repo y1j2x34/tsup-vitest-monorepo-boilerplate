@@ -9,6 +9,11 @@ export default ts.config(
     {
         files: ['**/*.{js,mjs,cjs}'],
         extends: [eslint.configs.recommended],
+        languageOptions: {
+            globals: {
+                ...globals.node,
+            },
+        },
     },
     {
         files: ['**/*.{ts,mts,cts}'],
