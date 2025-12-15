@@ -105,8 +105,8 @@ importers:
         specifier: ^7.3.0
         version: 7.3.0(@types/node@24.5.2)(jiti@2.4.2)(yaml@2.8.2)
       vite-tsconfig-paths:
-        specifier: ^5.1.4
-        version: 5.1.4(typescript@5.9.2)(vite@7.3.0(@types/node@24.5.2)(jiti@2.4.2)(yaml@2.8.2))
+        specifier: ^6.0.1
+        version: 6.0.1(typescript@5.9.2)(vite@7.3.0(@types/node@24.5.2)(jiti@2.4.2)(yaml@2.8.2))
       vitest:
         specifier: ^3.2.4
         version: 3.2.4(@types/node@24.5.2)(@vitest/browser@3.2.4)(jiti@2.4.2)(yaml@2.8.2)
@@ -3344,8 +3344,8 @@ packages:
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
 
-  vite-tsconfig-paths@5.1.4:
-    resolution: {integrity: sha512-cYj0LRuLV2c2sMqhqhGpaO3LretdtMn/BVX4cPLanIZuwwrkVl+lK84E/miEXkCHWXuq65rhNN4rXsBcOB3S4w==}
+  vite-tsconfig-paths@6.0.1:
+    resolution: {integrity: sha512-OQuYkfCQhc2T+n//0N7/oogTosgiSyZQ7dydrpUlH5SbnFTtplpekdY4GMi6jDwEpiwWlqeUJMyPfC2ePM1+2A==}
     peerDependencies:
       vite: '*'
     peerDependenciesMeta:
@@ -3557,7 +3557,7 @@ snapshots:
       '@babel/traverse': 7.27.7
       '@babel/types': 7.27.7
       convert-source-map: 2.0.0
-      debug: 4.4.1
+      debug: 4.4.3(supports-color@5.5.0)
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -6939,7 +6939,7 @@ snapshots:
   vite-node@3.2.4(@types/node@24.5.2)(jiti@2.4.2)(yaml@2.8.2):
     dependencies:
       cac: 6.7.14
-      debug: 4.4.1
+      debug: 4.4.3(supports-color@5.5.0)
       es-module-lexer: 1.7.0
       pathe: 2.0.3
       vite: 7.3.0(@types/node@24.5.2)(jiti@2.4.2)(yaml@2.8.2)
@@ -6957,9 +6957,9 @@ snapshots:
       - tsx
       - yaml
 
-  vite-tsconfig-paths@5.1.4(typescript@5.9.2)(vite@7.3.0(@types/node@24.5.2)(jiti@2.4.2)(yaml@2.8.2)):
+  vite-tsconfig-paths@6.0.1(typescript@5.9.2)(vite@7.3.0(@types/node@24.5.2)(jiti@2.4.2)(yaml@2.8.2)):
     dependencies:
-      debug: 4.4.1
+      debug: 4.4.3(supports-color@5.5.0)
       globrex: 0.1.2
       tsconfck: 3.1.6(typescript@5.9.2)
     optionalDependencies:
